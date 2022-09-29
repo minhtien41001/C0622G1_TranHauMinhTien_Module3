@@ -10,7 +10,7 @@
 
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Danh sách khách hàng</title>
   </head>
   <body>
   <c:redirect url="/customerlist"></c:redirect>
