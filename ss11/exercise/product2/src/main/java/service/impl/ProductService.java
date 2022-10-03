@@ -8,7 +8,7 @@ import service.IProductService;
 import java.util.List;
 
 public class ProductService implements IProductService {
-    IProductRepository iProductRepository = new ProductRepository();
+    private IProductRepository iProductRepository = new ProductRepository();
     @Override
     public List<Product> findAll() {
         return iProductRepository.findAll();
@@ -16,6 +16,7 @@ public class ProductService implements IProductService {
 
     @Override
     public void save(Product product) {
+        product.setId(iProductRepository.findAll().get(iProductRepository.findAll().size() -1).getId() + 1);
         iProductRepository.save(product);
     }
 

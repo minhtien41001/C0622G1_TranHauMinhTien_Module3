@@ -38,13 +38,14 @@ public class ProductServlet extends HttpServlet {
                 searchByName(request, response);
                 break;
             default:
-                listProducts(request, response);
+                searchByName(request, response);
+//                listProducts(request, response);
         }
     }
 
     private void searchByName(HttpServletRequest request, HttpServletResponse response) {
         String nameSearch = request.getParameter("nameSearch");
-        List<Product> productList = iProductService.findByName(nameSearch);
+        List<Product> productList = iProductService.findByName(nameSearch == null ? "" :nameSearch );
         request.setAttribute("productList", productList);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/list.jsp");
         try {
@@ -193,13 +194,12 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
-        int id = iProductService.findAll().get(iProductService.findAll().size() -1).getId() + 1;
         String name = request.getParameter("name");
         double price = Double.parseDouble(request.getParameter("price"));
         String describe = request.getParameter("describe");
         String producer = request.getParameter("producer");
 
-        Product product = new Product(id, name, price, describe, producer);
+        Product product = new Product(1, name, price, describe, producer);
         iProductService.save(product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/create.jsp");
         request.setAttribute("mess", "Thêm mới thành công!");
