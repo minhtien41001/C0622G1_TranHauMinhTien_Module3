@@ -1,11 +1,20 @@
 package service;
 
+import dto.EmployeeDto;
 import model.Employee;
 
 import java.util.List;
 
 public interface IEmployeeService {
-    List<Employee> findAll();
+    List<EmployeeDto> findAll();
 
-    List<Employee> search(String name, String address, String phone);
+    boolean create(Employee employee);
+
+    Employee findById(int idFind);
+
+    boolean edit(Employee employee);
+
+    boolean delete(int idDelete);
+
+    List<EmployeeDto> search(String nameSearch, String addressSearch, String phoneSearch);
 }

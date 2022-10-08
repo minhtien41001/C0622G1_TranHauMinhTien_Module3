@@ -9,12 +9,14 @@ public class Employee {
     private String employeeNumberPhone;
     private String employeeEmail;
     private String employeeAddress;
-    private String positionName;
-    private String educationDegreeName;
-    private String divisionName;
-    private String userName;
+    private int positionId;
+    private int educationDegreeId;
+    private int divisionId;
 
-    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeeNumberPhone, String employeeEmail, String employeeAddress, String positionName, String educationDegreeName, String divisionName, String userName) {
+    public Employee() {
+    }
+
+    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeeNumberPhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -23,13 +25,12 @@ public class Employee {
         this.employeeNumberPhone = employeeNumberPhone;
         this.employeeEmail = employeeEmail;
         this.employeeAddress = employeeAddress;
-        this.positionName = positionName;
-        this.educationDegreeName = educationDegreeName;
-        this.divisionName = divisionName;
-        this.userName = userName;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
     }
 
-    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeeNumberPhone, String employeeEmail, String employeeAddress, String positionName, String educationDegreeName, String divisionName, String userName) {
+    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeeNumberPhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId) {
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
         this.employeeIdCard = employeeIdCard;
@@ -37,10 +38,9 @@ public class Employee {
         this.employeeNumberPhone = employeeNumberPhone;
         this.employeeEmail = employeeEmail;
         this.employeeAddress = employeeAddress;
-        this.positionName = positionName;
-        this.educationDegreeName = educationDegreeName;
-        this.divisionName = divisionName;
-        this.userName = userName;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
     }
 
     public int getEmployeeId() {
@@ -107,35 +107,28 @@ public class Employee {
         this.employeeAddress = employeeAddress;
     }
 
-    public String getPositionName() {
-        return positionName;
+    public int getPositionId() {
+        return positionId;
     }
 
-    public void setPositionName(String positionName) {
-        this.positionName = positionName;
+    public void setPositionId(int positionId) {
+        this.positionId = positionId;
     }
 
-    public String getEducationDegreeName() {
-        return educationDegreeName;
+    public int getEducationDegreeId() {
+        return educationDegreeId;
     }
 
-    public void setEducationDegreeName(String educationDegreeName) {
-        this.educationDegreeName = educationDegreeName;
+    public void setEducationDegreeId(int educationDegreeId) {
+        this.educationDegreeId = educationDegreeId;
     }
 
-    public String getDivisionName() {
-        return divisionName;
+    public int getDivisionId() {
+        return divisionId;
     }
 
-    public void setDivisionName(String divisionName) {
-        this.divisionName = divisionName;
+    public void setDivisionId(int divisionId) {
+        this.divisionId = divisionId;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }

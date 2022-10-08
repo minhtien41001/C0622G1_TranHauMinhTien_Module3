@@ -11,6 +11,26 @@
     <title>Home</title>
     <link rel="stylesheet" href="/bootstrap-5.1.3/css/bootstrap.min.css">
     <style>
+      body {
+        background-image: url("https://cdn.wallpapersafari.com/97/50/eRwDMy.jpg");
+      }
+      form {
+        background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v960-ning-30.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=63dd5f402645ef52fb7dfb592aec765a");
+      }
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      input:invalid {
+        border-color: red;
+      }
+      input:valid {
+        border-color: green;
+      }
+    </style>
+    <style>
       .header {
         background-image: url("https://img.wallpapersafari.com/desktop/1600/900/22/47/iU4Gez.jpg");
       }
@@ -61,12 +81,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown ms-3">
-            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
-               aria-expanded="false">Employee</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/employee">Employee list</a></li>
-              <li><a class="dropdown-item" href="/employee?action=create">Add new Employee</a></li>
-            </ul>
+            <a class="nav-link text-dark" href="/employee" role="button" >Employee</a>
           </li>
 
           <li class="nav-item dropdown ms-3">
@@ -146,7 +161,7 @@
           crossorigin="anonymous"></script>
 
 
-  <script src="bootstrap-5.1.3/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.1.3/js/bootstrap.min.js"></script>
   </body>
 
 </html>

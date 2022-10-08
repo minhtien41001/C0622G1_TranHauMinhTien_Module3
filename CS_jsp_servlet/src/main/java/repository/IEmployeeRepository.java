@@ -1,11 +1,12 @@
 package repository;
 
+import dto.EmployeeDto;
 import model.Employee;
 
 import java.util.List;
 
 public interface IEmployeeRepository {
-    List<Employee> findAll();
+    List<EmployeeDto> findAll();
 
     boolean create(Employee employee);
 
@@ -15,7 +16,7 @@ public interface IEmployeeRepository {
 
     Employee findById(int idFind);
 
-    List<Employee> search(String nameSearch,String addressSearch,String phoneSearch);
+    List<EmployeeDto> search(String nameSearch,String addressSearch,String phoneSearch);
 
 
 }
